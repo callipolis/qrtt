@@ -1,1 +1,15 @@
+
+
+# Site settings
+title: qrtt
+email: lsw@lwco.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Quantitative Research and Trading Tools
+
+# Build settings
 theme: jekyll-theme-minimal
+
+
+# logo: [Location of the logo]
+# show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+# google_analytics: [Your Google Analytics tracking ID]
