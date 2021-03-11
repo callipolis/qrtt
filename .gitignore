@@ -1,3 +1,9 @@
+# Files used during development process
+dev/
+dev_tests.py
+dev_tests.ipynb
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

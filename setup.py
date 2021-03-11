@@ -7,6 +7,6 @@ setup(name='qrtt',
       url='https://qrtt.org',
       author='Leopold W.',
       author_email='lsw@lwco.com',
-      packages=find_packages(exclude=("tests",)),
-      install_requires=['pandas', 'numpy'],
+      packages=find_packages(exclude=("tests", "tests_dev")),
+      install_requires=['pandas', 'numpy', 'matplotlib', 'seaborn'],
       )
