@@ -23,9 +23,8 @@ def rsi(ohlcv, period=14, ohlcv_series="close"):
     _ohlcv["diff"] = _ohlcv[ohlcv_series].diff(periods=1)
     _ohlcv["diff_up"] = np.where(_ohlcv["diff"] >= 0, _ohlcv["diff"], 0)
     _ohlcv["diff_down"] = np.where(_ohlcv["diff"] < 0, _ohlcv["diff"], 0)
-
+    # Calculate Average Gain and Average Loss
     _ohlcv[["rsi_u", "rsi_d"]] = _ohlcv[["diff_up", "diff_down"]].ewm(alpha=1 / period, min_periods=period).mean()
-
     _ohlcv["rs"] = abs(_ohlcv["rsi_u"]) / abs(_ohlcv["rsi_d"])
     indicator_values = 100 - (100 / (1 + _ohlcv["rs"]))
 

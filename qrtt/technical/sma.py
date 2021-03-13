@@ -1,7 +1,7 @@
 # import pandas as pd
 
 
-def sma(_ohlcv, period=10, ohlcv_series="close"):
+def sma(ohlcv, period=10, ohlcv_series="close"):
     """
     test_function does blah blah blah.
 
@@ -13,10 +13,10 @@ def sma(_ohlcv, period=10, ohlcv_series="close"):
     :type ohlcv_series: str
     :return: pd.series
     """
+    _ohlcv = ohlcv[[ohlcv_series]].copy(deep=True)
+    indicator_values = _ohlcv[ohlcv_series].rolling(window=period, min_periods=period).mean()
 
-    indicator_col = _ohlcv[ohlcv_series].rolling(window=period, min_periods=period).mean()
-
-    return indicator_col
+    return indicator_values
 
 
 def sma_dif(_ohlcv, short_period=12, long_period=26, percent_diff=True, ohlcv_series="close"):

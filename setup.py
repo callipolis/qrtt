@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(name='qrtt',
-      version='0.0.6',
+      version='0.0.7',
       description='Quantitative research and trading tools.',
       url='https://qrtt.org',
       author='Leopold W.',
