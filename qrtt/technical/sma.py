@@ -3,7 +3,7 @@
 
 def sma(ohlcv, period=10, ohlcv_series="close"):
     """
-    test_function does blah blah blah.
+    Calculate simple moving average of the input data
 
     :param _ohlcv: ohlcv dataframe
     :type _ohlcv: pd.DataFrame
