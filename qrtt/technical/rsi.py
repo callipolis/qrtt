@@ -29,3 +29,8 @@ def rsi(ohlcv, period=14, ohlcv_series="close"):
     indicator_values = 100 - (100 / (1 + _ohlcv["rs"]))
 
     return indicator_values
+
+
+def ADD_RSI():
+    pass
+    

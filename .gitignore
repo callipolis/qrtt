@@ -1,3 +1,10 @@
+# IDE
+
+.idea
+.ipynb_checkpoints
+.vscode
+
+
 # Files used during development process
 dev/
 dev_tests.py
