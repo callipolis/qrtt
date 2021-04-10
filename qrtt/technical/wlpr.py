@@ -35,3 +35,10 @@ def wlpr(ohlcv, period=14, ohlcv_series="close"):
 
     indicator_values = -100 * (_ohlcv['n_high'] - _ohlcv[ohlcv_series]) / (_ohlcv['n_high'] - _ohlcv['n_low'])
     return indicator_values
+
+
+def ADD_WLPRs(ohlcv, periods=[14,100,200], ohlcv_series="close"):
+    for p in periods:
+        indicator_name = f'wlpr_{p}_{ohlcv_series[0]}'
+        ohlcv[indicator_name] = wlpr(ohlcv, p, ohlcv_series)
+    return ohlcv
